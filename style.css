@@ -45,5 +45,16 @@
     top: 110px;
     left: 580px;
 
-    background-color: yellowgreen;
+    background-image: url(resources/obtic.png);
+
+    animation: block 1s infinite linear;
+}
+
+@keyframes block{
+    0% {
+        left: 580px;
+    }
+    100% {
+        left: -50px;
+    }
 }
