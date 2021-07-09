@@ -21,7 +21,7 @@ let isRuning = setInterval(function() {
     //setect collision
     if (obticleft < 50 && obticleft > 0 && dinoTop >= 140)
     {
-        console.log("collision")
+        alert("Game Over!");
     }
 
 }, 10);
