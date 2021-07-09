@@ -1,4 +1,5 @@
 const dino = document.getElementById("dino");
+const obtic = document.getElementById("obtic");
 
 function jump() {
     if (dino.classList != "jump"){
@@ -8,6 +9,22 @@ function jump() {
         dino.classList.remove("jump");
     }, 300);
 }}
+
+let isRuning = setInterval(function() {
+
+    //dino position
+    let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
+
+    //obtic position
+    let obticleft = parseInt(window.getComputedStyle(obtic).getPropertyValue("left"));
+
+    //setect collision
+    if (obticleft < 50 && obticleft > 0 && dinoTop >= 140)
+    {
+        console.log("collision")
+    }
+
+}, 10);
 
 document.addEventListener("keydown", function (event) {
     jump();
