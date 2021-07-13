@@ -20,17 +20,19 @@ let isRuning = setInterval(function() {
     let obticleft = parseInt(window.getComputedStyle(obtic).getPropertyValue("left"));
 
     let obtictop = getComputedStyle(obtic).top;
-    
+    let value = Math.floor(Math.random() * 5);
     if (obtictop === '0px'){
-        let value = Math.floor(Math.random() * 5);
+        
         if (value == 1)
             obtic.classList.add("obtic1");
         if (value == 2)
             obtic.classList.add("obtic2");
     }
-    console.log(value);
-    if (obticleft === -50)
+    console.log(obticleft, 'sd');
+
+    if (obticleft < 0)
     {
+        console.log("jdfhdjksfhdksjfhdjksfh");
         if (value === 1)
             obtic.classList.remove("obtic1");
         if (value === 2)
