@@ -8,6 +8,7 @@ function jump() {
     setTimeout(function(){
         dino.classList.remove("jump");
     }, 300);
+
 }}
 
 let isRuning = setInterval(function() {
@@ -18,6 +19,23 @@ let isRuning = setInterval(function() {
     //obtic position
     let obticleft = parseInt(window.getComputedStyle(obtic).getPropertyValue("left"));
 
+    let obtictop = getComputedStyle(obtic).top;
+    
+    if (obtictop === '0px'){
+        let value = Math.floor(Math.random() * 5);
+        if (value == 1)
+            obtic.classList.add("obtic1");
+        if (value == 2)
+            obtic.classList.add("obtic2");
+    }
+    console.log(value);
+    if (obticleft === -50)
+    {
+        if (value === 1)
+            obtic.classList.remove("obtic1");
+        if (value === 2)
+            obtic.classList.remove("obtic2");
+    }
     //setect collision
     // if (obticleft < 50 && obticleft > 0 && dinoTop >= 140)
     // {
@@ -25,14 +43,14 @@ let isRuning = setInterval(function() {
     // }
 }, 10);
 
-let addobtic = setInterval(function() {
-    if (obtic.classList != "move"){
-        obtic.classList.add("move");
-    }
-    else {
-        obtic.classList.remove("move");
-    }
-}, 15000);
+// let addobtic = setInterval(function() {
+//     if (obtic.classList != "move"){
+//         obtic.classList.add("move");
+//     }
+//     else {
+//         obtic.classList.remove("move");
+//     }
+// }, 15000);
 
 document.addEventListener("keydown", function (event) {
     jump();

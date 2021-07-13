@@ -50,12 +50,22 @@
 
 #obtic {
   width: 20px;
-  height: 40px;
+  left: 575px;
   position: relative;
-  top: 110px;
-  left: 580px;
+}
 
-  background-image: url(resources/obtic.png);
+.obtic1 {
+  height: 40px;
+  top: 110px;
+
+  background-color: aqua;
+}
+
+.obtic2 {
+  height: 60px;
+  top: 90px;
+
+  background-color: aquamarine;
 }
 
 .move {
@@ -69,4 +79,8 @@
   100% {
     left: -50px;
   }
+}
+
+.ayoub {
+  top: 150;
 }
