@@ -19,12 +19,20 @@ let isRuning = setInterval(function() {
     let obticleft = parseInt(window.getComputedStyle(obtic).getPropertyValue("left"));
 
     //setect collision
-    if (obticleft < 50 && obticleft > 0 && dinoTop >= 140)
-    {
-        alert("Game Over!");
-    }
-
+    // if (obticleft < 50 && obticleft > 0 && dinoTop >= 140)
+    // {
+    //     alert("Game Over!");
+    // }
 }, 10);
+
+let addobtic = setInterval(function() {
+    if (obtic.classList != "move"){
+        obtic.classList.add("move");
+    }
+    else {
+        obtic.classList.remove("move");
+    }
+}, 15000);
 
 document.addEventListener("keydown", function (event) {
     jump();
