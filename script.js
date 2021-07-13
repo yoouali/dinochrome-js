@@ -39,10 +39,13 @@ let isRuning = setInterval(function() {
             obtic.classList.remove("obtic2");
     }
     //setect collision
-    // if (obticleft < 50 && obticleft > 0 && dinoTop >= 140)
-    // {
-    //     alert("Game Over!");
-    // }
+    if (obticleft < 50 && obticleft > 0)
+    {
+        if (value == 1 && dinoTop >= 140)
+            alert("Game Over obtic1");
+        if (value == 2 && dinoTop >= 140)
+            alert("Game Over obtic2");
+    }
 }, 10);
 
 // let addobtic = setInterval(function() {
